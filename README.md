@@ -8,16 +8,12 @@ A comprehensive Arabic speech-to-text system using deep learning with OpenAI Whi
 
 ## Features
 
-### Core Features (P1 - Production Ready)
+### Core Features 
 - **🎙️ Arabic Speech-to-Text (ASR)**: Convert Arabic audio to text with WER ≤ 20%
 - **📊 Model Comparison**: Benchmark Whisper, Wav2Vec 2.0, and DeepSpeech
 - **🔧 Fine-tuned Whisper**: Optimized for Arabic using Mozilla Common Voice dataset
 - **🎨 Interactive Demo**: Gradio/Streamlit web interface for easy testing
 
-### Advanced Features (P2 - Optional)
-- **👥 Speaker Identification**: Detect and label different speakers (diarization)
-- **😊 Emotion Detection**: Classify emotional content (happy, angry, neutral, sad)
-- **🔑 Keyword Spotting**: Detect predefined keywords with high precision
 
 ## Quick Start
 
