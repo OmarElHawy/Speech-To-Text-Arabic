@@ -340,19 +340,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Hugging Face for [Transformers](https://huggingface.co/transformers/) library
 - PyAudio and Librosa communities
 
-## Support & Contact
-
-- **Issues**: [GitHub Issues](https://github.com/example/arabic-asr/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/example/arabic-asr/discussions)
-- **Email**: support@example.com
-
-## Status  
-
-**Current Phase**: 🟡 Development (Phase 1-2)
-
-- ✅ Specification & Design Complete
-- 🟡 Phase 1-2 Setup in Progress
-- ⏳ Phase 3-9 User Stories (upcoming)
-- ⏳ Phase 10 Polish & Release (upcoming)
-
-See [CHANGELOG](CHANGELOG.md) for detailed version history.
