@@ -24,12 +24,7 @@ A comprehensive Arabic speech-to-text system using deep learning with OpenAI Whi
 
 ### Installation
 
-1. **Clone Repository**
-   ```bash
-   cd "c:\it's me\E-JUST\NN\Speech to Text Project"
-   ```
-
-2. **Create Virtual Environment**
+1. **Create Virtual Environment**
    ```bash
    python -m venv venv
    
@@ -40,12 +35,12 @@ A comprehensive Arabic speech-to-text system using deep learning with OpenAI Whi
    source venv/bin/activate
    ```
 
-3. **Install Dependencies**
+2. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Verify Installation**
+3. **Verify Installation**
    ```bash
    python -c "import torch; print(f'GPU available: {torch.cuda.is_available()}')"
    ```
