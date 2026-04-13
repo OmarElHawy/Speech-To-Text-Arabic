@@ -1,0 +1,71 @@
+# Training Configuration for Whisper Fine-Tuning on Arabic Data (T067)
+# Mozilla Common Voice Arabic Dataset
+
+# Model Configuration
+model_size: "small"  # Options: tiny, base, small, medium, large
+
+# Learning Parameters
+learning_rate: 1e-5
+batch_size: 16
+epochs: 3
+warmup_steps: 500
+weight_decay: 0.01
+
+# Gradient Accumulation (for effective larger batch sizes)
+gradient_accumulation_steps: 1
+max_grad_norm: 1.0
+
+# Random Seed for Reproducibility
+seed: 42
+
+# Device Configuration
+device: "auto"  # "cuda" for GPU, "cpu" for CPU, "auto" for auto-detection
+
+# Output Directories
+output_dir: "./output"
+checkpoint_dir: "./checkpoints"
+
+# Early Stopping Configuration
+patience: 3  # Stop if no improvement for N validation checks
+eval_steps: 500  # Run validation every N training steps
+
+# Dataset Configuration
+dataset:
+  data_dir: "./cv-corpus-24.0-2025-12-05/ar"
+  train_split: "train"
+  val_split: "dev"
+  test_split: "test"
+  
+  # Data splitting (if using custom splits instead of CV splits)
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  
+  # Audio Preprocessing
+  max_duration: 30.0  # Maximum duration in seconds
+  sample_rate: 16000  # Standard for Whisper
+  augment: true       # Enable audio augmentation
+
+# Audio Augmentation
+augmentation:
+  pitch_shift: true        # Random pitch shift (-2 to +2 semitones)
+  pitch_shift_probability: 0.5
+  
+  time_stretch: true       # Random time stretch (0.9x to 1.1x)
+  time_stretch_probability: 0.5
+  
+  background_noise: true   # Add random background noise
+  noise_probability: 0.3
+  noise_level: 0.005
+
+# Evaluation Metrics
+evaluation:
+  compute_wer: true   # Compute Word Error Rate
+  compute_cer: false  # Compute Character Error Rate (optional)
+
+# Logging
+logging:
+  log_level: "INFO"
+  log_frequency: 100  # Log metrics every N steps
+  save_logs: true
+  logs_dir: "./logs"
